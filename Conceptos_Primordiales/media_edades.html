@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>MEDIA DE EDADES</title>
+</head>
+<body>
+    <script>
+        function imprimir(contenido) { document.write(contenido); saltarLinea(); }
+        function saltarLinea() { document.write("<br>"+"<br>"); }
+
+        var numeroMiembros = parseInt(prompt("Ingrese la cantidad de miembros de su familia"));
+        var contador = 1;
+        var totalEdades = 0;
+
+        while (contador <= numeroMiembros) {
+            edad = parseInt(prompt("Ingrese la edad del familiar"));
+            totalEdades = totalEdades + edad;
+            contador++;
+        }
+
+        mediaEdades = Math.round(totalEdades/numeroMiembros);
+        imprimir("La media de las edades de la familia es "+ mediaEdades);
+        imprimir("FIN");
+
+
+
+    </script>
+</body>
+</html>

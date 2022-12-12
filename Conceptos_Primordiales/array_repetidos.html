@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>INGREDIENTES REPETIDOS</title>
+</head>
+<body>
+    <script>
+    /*El siguiente codigo busca cumplir con el ingreso de valores a un array (Lista de Ingredientes),<br>
+    sin embargo los ingredientes repetidos no deben de ser ingresados al array*/
+    
+        var ingredientes = [];     
+        var contador = 1;
+
+        function imprimir(contenido) {
+            document.write(contenido);
+            saltarLinea();
+        }
+        function saltarLinea() {
+            document.write("<br>");
+        }
+
+        function listado(cantidad) {
+            while(contador <= cantidad) {
+            var ingrediente = prompt("Informe el ingrediente " + contador);
+            let repetido = false;
+
+            for (let posicion = 0; posicion < ingredientes.length; posicion++) {
+                if (ingrediente == ingredientes[posicion]) {
+                    alert("El ingrediente "+ingrediente+" ya ha sido registrado. Escriba otro ingrediente");
+                    repetido = true;
+                    break;
+                }
+            }
+
+            if (repetido == false) {
+                ingredientes.push(ingrediente);
+                console.log(ingredientes)
+                contador++;
+            }
+            }
+        }
+
+        var cantidad = parseInt(prompt("¿Cuántos ingredientes vas a añadir?"));
+        listado(cantidad);
+        imprimir("<h2>Ingredientes Ingresados</h2>"+ingredientes+"<br>");
+    </script>
+</body>
+</html>

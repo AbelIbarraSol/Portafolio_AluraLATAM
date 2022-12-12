@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>GENERAR SALTOS</title>
+        <meta charset="UTF-8">
+        
+    </head>
+    <body>
+        <h1><mark>MATRIZ CON FOR</mark></h1><br>
+        <script>
+            function saltarLinea() {
+                document.write("<br>");
+                document.write("<br>");
+            }
+
+            function imprimir(frase) {
+                document.write(frase);
+            }
+
+            const cantidad_f = parseInt(prompt("Ingrese la cantidad de filas"));
+            const cantidad_c = parseInt(prompt("Ingrese la cantidad de columnas"));
+            for (let fila = 1; fila <= cantidad_f; fila++){
+                for (let  columna = 0 ; columna < cantidad_c; columna++) {
+                    document.write("<mark>  * | </mark>")
+                }
+                saltarLinea();              
+            }
+        </script>
+    </body>
+</html>

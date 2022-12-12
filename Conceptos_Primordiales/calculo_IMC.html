@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>CALCULO DE IMC (Índice de Masa Corporal)</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <h1>Calculo de IMC</h1>
+        <hr>
+        <script>
+            var nombre = prompt("Digite su Nombre:");
+            var peso = prompt(nombre+" digite su peso:");
+            var altura = prompt(nombre+" digite su altura:");
+            
+            function calcularIMC(peso,altura) {
+                return (Math.round(peso/(altura*altura)));
+            }
+            
+            function saltarLinea() {
+                document.write("<br>");
+                document.write("<br>");
+            }   
+
+            function imprimir(contenido) {
+                document.write(contenido);
+                saltarLinea();                
+            }
+
+            function categorizacion(imcCalculado){
+                if (imcCalculado < 18.5) {
+                    return "Insuficiencia ponderal";
+                }
+                if (imcCalculado >= 18.5) {
+                    if (imcCalculado <= 24.9) {
+                        return "Intervalo normal";
+                    }
+                }
+                if (imcCalculado >= 25) {
+                    if (imcCalculado < 30) {
+                        return "Sobrepeso";
+                    } 
+                }
+                if (imcCalculado >= 30) {
+                    return "Obesidad";
+                }
+            }
+
+            imcCalculado = calcularIMC(peso,altura);
+            
+            imprimir(nombre+" su IMC calculado es de "+ imcCalculado);
+            imprimir("Su IMC es clasificado como: "+ categorizacion(imcCalculado));
+        </script>
+    </body>
+</html>

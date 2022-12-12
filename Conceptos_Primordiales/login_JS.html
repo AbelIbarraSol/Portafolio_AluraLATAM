@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Login JS</title>
+</head>
+<body>
+    
+    <script>
+        function saltarLinea() {
+            document.write("<br>");
+            document.write("<br>");
+        }
+
+        function imprimir(frase) {
+            document.write(frase);
+        }
+
+        var inicioDeSesionRegistrado = "alura";
+        var contrasenhaRegistrada = "alura321";
+       
+        let intentos = 1;
+        while(intentos<=3) {
+            var inicioDeSesionIngresado = prompt("Ingrese su usuario");
+            var contrasenhaIngresada = prompt("Ingrese su contraseña");
+
+            if( inicioDeSesionRegistrado == inicioDeSesionIngresado && contrasenhaRegistrada == contrasenhaIngresada ) {
+                alert("Bienvenido al sistema " + inicioDeSesionIngresado);
+                imprimir("<h2><mark>ALURA LATAM XD</mark></h2>");
+                break;
+            } else {
+                if(intentos == 3) {
+                    imprimir("<h2><mark>Cuenta suspendida por 24 horas</mark></h2>");
+                    imprimir("<h4>Contacte con el Área de SOPORTE</h4>");
+                }else{
+                    alert("inicio de sesión inválido. Favor intente de nuevo");
+                }
+            }
+            intentos++;
+            
+        }
+
+    </script>
+</body>
+</html>

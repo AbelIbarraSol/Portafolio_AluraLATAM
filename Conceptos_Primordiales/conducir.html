@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>¿Puedes conducir?</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <h1>¿Puedes conducir?</h1>
+        <h4>Este programa, de acuerdo con la respuesta del usuario, debe mostrar el mensaje "Puedes conducir" o "No puedes conducir".<br>
+            Recuerda que puede conducir solo quien tiene 18 años o más y también quien tiene una licencia de conducir.
+            ¡Altera el programa para que responda automáticamente!</h4>
+        <hr>
+        <script>
+            function saltarLinea() {
+                document.write("<br>");
+            }
+
+            function imprimir(frase) {
+                document.write(frase);
+                saltarLinea();
+            }
+
+            function verificacion(edad,tieneLicencia) {
+                if((edad >= 18) && (tieneLicencia == "S")) {
+                    imprimir("Puedes conducir");
+                }
+                else {
+                    imprimir("No puedes conducir");
+                }
+            }
+            
+            //.toUpperCase(); ==> uso del método para transformar a Mayúsculas
+            //.toLowerCase();==> uso del método para transformar a Minusculas
+            //.trim(); ==> para eliminar espacios en blanco
+            //.length == 1; ==> para verificar que solo sea un caracter
+            var edad = parseInt(prompt("¿Cuál es tu edad?"));
+            var tieneLicencia = prompt("¿Tienes licencia? Responde S ó N").toUpperCase(); // ==> uso del método para transformar a Mayúsculas
+
+            verificacion(edad,tieneLicencia);
+        </script>
+    </body>
+</html>

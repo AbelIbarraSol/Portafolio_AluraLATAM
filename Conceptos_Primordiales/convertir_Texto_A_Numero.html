@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Convertir Texto a Numero</title>
+</head>
+<body>
+    <h1>Convertir Texto a Numero</h1>
+    <script>
+                
+        function saltarLinea(){
+            document.write("<br>");
+            document.write("<hr>");
+        }
+
+        function imprimir(contenido) {
+            document.write(contenido);
+            saltarLinea();
+        }
+        
+        const victorys = parseInt(prompt("Informae la cantidad de victorias: "));
+        const ties = parseInt(prompt("Informae la cantidad de victorias: "));
+        
+        const totalpoints = (victorys * 3) + ties;
+
+        imprimir("El total de puntos del equipo es: " + totalpoints);
+
+    </script>
+</body>
+</html>

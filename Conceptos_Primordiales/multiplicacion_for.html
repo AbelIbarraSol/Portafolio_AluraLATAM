@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>FOR</title>
+</head>
+<body>
+    <h1>Tabla de multiplicacion</h1>
+    <script>
+        function imprimir(contenido) { document.write(contenido); saltarLinea(); }
+        function saltarLinea() { document.write("<br>"+"<br>"); }
+        
+        function tabla(multiplicando){
+            let multiplicador = 1;
+            imprimir("CICLO WHILE")
+            while (multiplicador <= 10) {
+                let resultado = multiplicando * multiplicador;
+                imprimir(multiplicando+" x "+multiplicador+" = "+resultado);
+                multiplicador++; //<-- multiplicador = multiplicador + 1
+            }
+
+            imprimir("CICLO FOR")
+            for (let multiplicador = 1; multiplicador <= 10; multiplicador++){
+                console.log("contador = "+multiplicador);
+                let resultado = multiplicando * multiplicador;
+                imprimir(multiplicando+" x "+multiplicador+" = "+resultado);
+                console.log("imprimir");
+            }
+        }
+        
+        const multiplicando = parseInt(prompt("Ingrese el número de la tabla que desea ver "));
+        tabla(multiplicando);
+    </script>
+</body>
+</html>

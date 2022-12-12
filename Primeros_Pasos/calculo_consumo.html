@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>CALCULO CONSUMO</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <h3>¿Alcohol o gasolina?</h3>
+        <script>
+            function imprimir(contenido) {
+                document.write(contenido);
+            }
+            var consumo_alcohol = 40;
+            var consumo_gasolina = 40;
+            var kilometros_alcohol =300;
+            var kilometros_gasolina =480;
+
+            var efi_alcohol = kilometros_alcohol/consumo_alcohol;
+            var efi_gasolina = kilometros_gasolina/consumo_gasolina;
+            
+            imprimir("<h4>¿Cuántos kilómetros recorre el carro por cada litro de gasolina?</h4>")
+            imprimir("El carro recorre "+efi_gasolina+" km por cada litro gastado de gasolina.")
+            imprimir("<h4>¿Cuál es el la eficiencia del carro usando alcohol?</h4>")
+            imprimir("El carro recorre "+efi_alcohol+" km por cada litro gastado de alcohol.")
+        </script>
+    </body>
+</html>

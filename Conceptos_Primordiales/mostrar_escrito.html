@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>MOSTRAR LO ESCRITO</title>
+</head>
+<body>
+    <!-- Aprendiendo a conectar html con js -->
+    <input/>
+    <button>Mostrar lo escrito</button>
+    
+    <script>
+        let input = document.querySelector("input");
+        input.focus();  //metodo que permite que el input este listo para escribir sin tener que dar click
+
+        function mostrarTexto() {    
+            alert(input.value)
+        }
+        var button = document.querySelector("button");
+        button.onclick = mostrarTexto;
+    </script>
+</body>
+</html>

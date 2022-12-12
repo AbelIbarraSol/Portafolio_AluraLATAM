@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>CALCULO DE IMC (Índice de Masa Corporal)</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <h1>Calculo de IMC</h1>
+        <hr>
+        <script>
+            var nombre = prompt("Digite su Nombre:");
+            var peso = prompt(nombre+" digite su peso:");
+            var altura = prompt(nombre+" digite su altura:");
+            
+            function calcularIMC(peso,altura) {
+                return (Math.round(peso/(altura*altura)));
+            }
+            
+            function saltarLinea() {
+                document.write("<br>");
+            }   
+
+            function imprimir(contenido) {
+                document.write(contenido);
+                saltarLinea();                
+            }
+
+            imcCalculado = calcularIMC(peso,altura);
+            imprimir(nombre+" su IMC calculado es de "+ imcCalculado);
+            
+        </script>
+    </body>
+</html>
